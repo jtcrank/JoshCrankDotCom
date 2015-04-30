@@ -1,0 +1,240 @@
+@font-face {
+    font-family: logoFont;
+    src: url(../fonts/steelfish.ttf);
+}
+
+html
+{
+   background: url(../images/tech2.png) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   padding-bottom: 35px;
+}
+
+body
+{
+   background: none;
+   margin-bottom: 80px;
+}
+
+pre
+{
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: white;
+   border: none;
+}
+
+.text-wrapper
+{
+   white-space: pre-wrap;
+}
+
+.navbar-inverse
+{
+   box-shadow: inset 0px 2px 0px #777;
+}
+
+.nav_active
+{
+   color: #d1682b !important;
+   font-weight: 500;
+}
+
+.nav_active:hover
+{
+   color: white !important;
+}
+
+.padded_row
+{
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+.padded_cell
+{
+   padding: 10px;
+   background-color: white;
+   border: 1px solid #ddd;
+   overflow: hidden;
+}
+
+.feature_image
+{
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.feature_titlebar
+{
+   width: 100%;
+   margin-bottom: -10px;
+   margin-top: -20px;
+   background-color: #FF7519;
+   text-align: center;
+   color: #efefef;
+   text-decoration: none;
+}
+
+.feature_desc a
+{
+   text-decoration: none;
+   color: black;
+}
+
+.feature_desc:hover
+{
+   text-decoration: underline;
+}
+
+.no_underline
+{
+   text-decoration: none;
+}
+
+.no_underline:hover
+{
+   text-decoration: none;
+}
+
+.feature_title
+{
+   padding: 5px;
+}
+
+#logo_pic
+{
+   height: 6em;
+   margin: 20px;
+}
+
+#name_logo
+{
+   font-family: logoFont;
+   font-size: 6em;
+}
+
+.logo_font
+{
+   font-family: logoFont;
+   font-size: 2em;
+   letter-spacing: .05em;
+}
+
+#tweet_logo
+{
+   font-size: 6em;
+   color: rgba(255, 117, 25, 0.5);
+   float: right;
+}
+
+
+
+#tweet_jumbo
+{
+   padding-top: 35px;
+   padding-bottom: 5px;
+}
+
+.first_name
+{
+   color: #FF7519;
+}
+
+.last_name
+{
+   color: #efefef;
+}
+
+.wide_button
+{
+   margin-bottom: 15px;
+   margin-top: -10px;
+}
+
+.tweet_user
+{
+   width:100%;
+   background-color: #FF7519;
+   margin-top: -1em;
+   border-radius: 10px;
+}
+
+.tweet_box
+{
+   border-radius: 10px;
+}
+
+.tweet-body
+{
+   background: none;
+}
+
+.twitter-bg
+{
+   background-image: url(../images/twitter-large2.jpg);
+   background-size: contain;
+   background-position: center;
+   background-repeat:no-repeat;
+}
+
+#twitter-banner
+{
+   min-height: 150px;
+   max-height: 350px;
+   margin-bottom: 15px;
+}
+
+#twitter_pic
+{
+   height: auto;
+   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #tweet_logo
+    {
+        font-size: 4em;
+        float: left;
+    }
+}
+
+.padded_header
+{
+  padding: 1em;
+  color: #FF7519;
+  font-family: logoFont;
+  margin-bottom: .3em;
+}
+
+.padded_header h1
+{
+  font-size: 4em;
+}
+
+.bg_light
+{
+  background-color: #EEEEEE;
+}
+
+.bg_dark
+{
+  background-color: #312D24;
+}
+
+.border_dark
+{
+  border: 3px solid #312D24;
+}
+
+.wide_margin
+{
+  margin: 10px;
+}
+
+.rounded_corners
+{
+  border-radius: 10px;
+}

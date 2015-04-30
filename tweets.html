@@ -1,0 +1,77 @@
+<!--
+ Copyright (C) <2015>
+*  Josh Crank - crank.5@wright.edu
+*  This program is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  This program is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+File Description:
+This page is the shell in which the Twitter view is rendered for. It contains
+the tweets that refer to @jtcrank, and does not require reload to refresh tweets.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" class="page_view">
+<head>
+  <title>Josh Crank - Tweet!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="twitter"></div>
+
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+   <div class="container">
+      <p class="navbar-text pull-left">Josh Crank - Copyright © 2015</p>
+      <a href="http://dev.joshcrank.com" class="navbar-btn btn-warning btn pull-right">Check out my Dev Projects</a>
+   </div>
+</div>
+
+<script src="js/libs/require.js"></script>
+<script>
+requirejs.config({
+   baseUrl: '/js',
+   paths: {
+      jquery:     'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min',
+      bootstrap:  'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.mins',
+      underscore: 'libs/underscore',
+      backbone:   'libs/backbone',
+      text:       'libs/text'
+   },
+
+   shim: {
+      underscore: {
+         exports: '_'
+      },
+      backbone: {
+         deps: ['underscore', 'jquery'],
+         exports: 'Backbone'
+      }
+   }
+});
+
+requirejs(
+      ['backbone', 'collections/tweets', 'models/tweet', 'views/tweets'],
+      function (Backbone, TweetCollection, TweetModel, TweetsView){
+         'use strict';
+
+         var view = new TweetsView();
+      }
+);
+
+</script>
+</body>
